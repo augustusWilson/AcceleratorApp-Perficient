@@ -5,15 +5,12 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_contact_model.dart';
-import 'package:simple_vcard_parser/simple_vcard_parser.dart';
 export 'create_contact_model.dart';
 
-
 class CreateContactWidget extends StatefulWidget {
-  const CreateContactWidget({Key? key}) : super(key: key);
+  const CreateContactWidget({super.key});
 
   @override
   _CreateContactWidgetState createState() => _CreateContactWidgetState();
@@ -80,11 +77,12 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
-        body: SingleChildScrollView(
+        body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -92,9 +90,9 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: EdgeInsets.all(32.0),
+                      padding: const EdgeInsets.all(32.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,15 +102,15 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             style: FlutterFlowTheme.of(context).headlineLarge,
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
-                            child: Container(
+                            child: SizedBox(
                               width: 370.0,
                               child: TextFormField(
                                 controller: _model.nameInputController,
                                 focusNode: _model.nameInputFocusNode,
                                 autofocus: true,
-                                autofillHints: [AutofillHints.name],
+                                autofillHints: const [AutofillHints.name],
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Name',
@@ -159,15 +157,15 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
-                            child: Container(
+                            child: SizedBox(
                               width: 370.0,
                               child: TextFormField(
                                 controller: _model.bussinessUnitInputController,
                                 focusNode: _model.bussinessUnitInputFocusNode,
                                 autofocus: true,
-                                autofillHints: [AutofillHints.email],
+                                autofillHints: const [AutofillHints.email],
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Business Unit',
@@ -215,15 +213,15 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
-                            child: Container(
+                            child: SizedBox(
                               width: 370.0,
                               child: TextFormField(
                                 controller: _model.titleInputController,
                                 focusNode: _model.titleInputFocusNode,
                                 autofocus: true,
-                                autofillHints: [AutofillHints.email],
+                                autofillHints: const [AutofillHints.email],
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Title',
@@ -270,15 +268,15 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
-                            child: Container(
+                            child: SizedBox(
                               width: 370.0,
                               child: TextFormField(
                                 controller: _model.locationInputController,
                                 focusNode: _model.locationInputFocusNode,
                                 autofocus: true,
-                                autofillHints: [AutofillHints.name],
+                                autofillHints: const [AutofillHints.name],
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Location',
@@ -326,7 +324,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -345,9 +343,9 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                               options: FFButtonOptions(
                                 width: 370.0,
                                 height: 44.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -357,7 +355,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                       color: Colors.white,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -366,7 +364,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -375,36 +373,18 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                   '#C62828', // scanning line color
                                   'Cancel', // cancel button text
                                   true, // whether to show the flash icon
-                                  ScanMode.QR,
+                                  ScanMode.BARCODE,
                                 );
-                                //print(_model.newContactQRData);
-                                VCard vc = VCard(_model.newContactQRData);
-                                _model.titleInputController.text = vc.title!;
-                                _model.nameInputController.text = vc.name!.first;
-                                _model.locationInputController.text = vc.name!.first;
-                                _model.bussinessUnitInputController.text = vc.organisation!;
-                                
-  print(vc.version); // 4.0
-  print(vc.formattedName); // Forrest Gump
-  print(vc.organisation); // Bubba Gump Shrimp Co.
-  print(vc.title); //Shrimp Man
-  print(vc.typedEmail); // [[forrestgump@example.com, [INTERNET]]]
-  print(vc
-      .typedTelephone); // [[+1-111-555-1212, [VOICE, WORK]], [+1-404-555-1212, [HOME, VOICE]]]
-  print(vc.name); //[Gump, Forrest, , Mr.,]
-  print(vc.gender); //M
-  print(vc
-      .typedAddress); // [[[100 Waters Edge, Baytown, LA 30314, United States of America], [WORK]], [[42 Plantation St., Baytown, LA 30314, United States of America], [HOME]]]
-  vc.print_lines(); // Will print all vcard lines without start and end tags
+
                                 setState(() {});
                               },
                               text: 'Scan Contact QR',
                               options: FFButtonOptions(
                                 width: 370.0,
                                 height: 44.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -414,7 +394,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                       color: Colors.white,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
